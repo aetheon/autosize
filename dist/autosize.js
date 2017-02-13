@@ -77,6 +77,8 @@
 
 			if (style.boxSizing === 'content-box') {
 				heightOffset = -(parseFloat(style.paddingTop) + parseFloat(style.paddingBottom));
+			} else if (style.boxSizing === 'border-box') {
+				heightOffset = -(parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth));
 			} else {
 				heightOffset = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
 			}
